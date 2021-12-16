@@ -1,0 +1,19 @@
+${pdict.profile.ID}
+${pdict.profile}
+<br>
+<h1>Customer Details</h1>
+firstName: ${pdict.customer.firstName}<br>
+lastName: ${pdict.customer.lastName}<br>
+contactNumber: ${pdict.customer.phoneHome}<br>
+Email: ${pdict.customer.email}<br>
+<iscomment> Address: ${pdict.customer.custom.address}<br> </iscomment>
+ZipCode: ${pdict.customer.custom.zip_code}
+<br>
+${pdict.customerName.length}
+<br>
+${pdict.products.ID}
+<br>
+<iscomment> ${pdict.customer.custom.address} </iscomment>
+${pdict.customer.custom.zip_code}
+<br>
+${pdict.productImage}

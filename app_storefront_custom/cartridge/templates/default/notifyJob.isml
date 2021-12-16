@@ -1,0 +1,5 @@
+<h2>Dear Customer,</h2><br>
+<p>We are happy to inform you, the product which you have notified[<b>${pdict.productInfo.pname}</b>],[<b>${pdict.productInfo.pid}</b>] is currently available</p>
+
+<a href="https://dev17-na01-pfsweb.demandware.net/on/demandware.store/Sites-RefArch-Site/en_US/Product-Show?pid=${pdict.productInfo.pid}">
+Please click here to buy</a>

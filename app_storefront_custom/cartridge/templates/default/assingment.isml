@@ -1,0 +1,3 @@
+${pdict.category.ID}<br>
+${pdict.category.displayName}<br>
+

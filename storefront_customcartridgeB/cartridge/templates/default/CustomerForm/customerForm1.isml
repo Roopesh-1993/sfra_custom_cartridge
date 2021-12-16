@@ -1,0 +1,76 @@
+<isdecorate template="common/layout/page">
+    
+    <h1 style="text-align:center">Customer Feedback Form</h1>
+    <div class="row justify-content-center equal-height">
+        <div class="col-sm-8 col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="login-form-nav">
+                        <form action="${pdict.actionUrl}" method="POST" class="customerForm1-form" <isprint
+                            value="${pdict.customerForm1.attributes}" encoding="off" />>
+
+                        <div class="form-group required">
+                            <label class="form-control-label">
+                                <isprint value="${pdict.customerForm1.name.label}" encoding="htmlcontent" />
+                            </label>
+                            <input type="text" class="form-control" id="customerForm1-form-name" <isprint
+                                value="${pdict.customerForm1.name.attributes}" encoding="off" />>
+                        </div>
+
+                        <div class="form-group required">
+                            <label class="form-control-label">
+                                <isprint value="${pdict.customerForm1.date.label}" encoding="htmlcontent" />
+                            </label>
+                            <input type="date" class="form-control" id="customerForm1-form-date" <isprint
+                                value="${pdict.customerForm1.date.attributes}" encoding="off" />>
+                        </div>
+
+                        <div class="form-group required">
+                            <label class="form-control-label">
+                                <isprint value="${pdict.customerForm1.email.label}" encoding="htmlcontent" />
+                            </label>
+                            <input type="email" class="form-control" id="customerForm1-form-email" <isprint
+                                value="${pdict.customerForm1.email.attributes}" encoding="off" />>
+                        </div>
+
+                        <div class="form-group required">
+                            <label class="form-control-label">
+                                <isprint value="${pdict.customerForm1.product.label}" encoding="htmlcontent" />
+                            </label>
+                            <input type="text" class="form-control" id="customerForm1-form-product" <isprint
+                                value="${pdict.customerForm1.product.attributes}" encoding="off" />>
+                        </div>
+
+                        <div class="form-group required">
+                            <label class="form-control-label">
+                                <isprint value="${pdict.customerForm1.service.label}" encoding="htmlcontent" />
+                            </label>
+                            <input type="text" class="form-control" id="customerForm1-form-service" <isprint
+                                value="${pdict.customerForm1.service.attributes}" encoding="off" />>
+                        </div>
+
+                        <div class="form-group required">
+                            <label class="form-control-label">
+                                <isprint value="${pdict.customerForm1.team.label}" encoding="htmlcontent" />
+                            </label>
+                            <input type="text" class="form-control" id="customerForm1-form-team" <isprint
+                                value="${pdict.customerForm1.team.attributes}" encoding="off" />>
+                        </div>
+
+                        <div class="form-group required">
+                            <label class="form-control-label">
+                                <isprint value="${pdict.customerForm1.feedback.label}" encoding="htmlcontent" />
+                            </label>
+                            <textarea id="customerForm1-form-feedback" rows="4" cols="80" <isprint
+                                value="${pdict.customerForm1.feedback.attributes}" encoding="off" />> </textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-block btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</isdecorate>
+

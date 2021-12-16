@@ -1,0 +1,64 @@
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+</style>
+
+
+
+<table>
+    <h1>Category Details </h1>
+    <h1>Category ID : ${pdict.category.ID} </h1>
+    <h1>Category Name :${pdict.category.displayName}</h1>
+    <tr>
+        <th>
+            <h2>Sub-Category ID</h2>
+        </th>
+        <th>
+            <h2>Sub-Category Name</h2>
+        </th>
+        <th>
+            <h2>Product length</h2>
+        </th>
+        <th>
+            <h2>Product ID</h2>
+        </th>
+        <th>
+            <h2>Product Name</h2>
+        </th>
+    </tr>
+    <isloop items="${pdict.category.subCategories}" var="subcat" status="loopstatus">
+        <tr>
+            <td>${subcat.ID}</td>
+            <td>${subcat.displayName}</td>
+            <td>${subcat.products.length}</td>
+            <td>
+                <isloop items="${subcat.products}" var="subid" status="loopstatus">
+                    ${subid.ID} ,
+                </isloop>
+            </td>
+            <td>
+                <isloop items="${subcat.products}" var="sub" status="loopstatus">
+                    ${sub.name} ,
+                </isloop>
+            </td>
+        </tr>
+    </isloop>
+</table>
+
+
+<h1> To display the products based on the condition like how many product should display </h1>
+<isloop items="${pdict.category.subCategories}" var="subcat" status="loopstatus">
+
+    <isloop items="${subcat.products}" var="sub" status="loopstatus">
+        <isif condition="${loopstatus.count <= 5}">
+            productID: ${sub.ID} ... productName: ${sub.name} ,<br>
+
+        <iselse/>
+
+        </isif>
+    </isloop>
+</isloop>

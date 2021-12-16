@@ -1,0 +1,7 @@
+<h1>Store Information</h1><br>
+
+<h2>${pdict.StoresInfo.address1}<br>
+${pdict.StoresInfo.email}<br>
+${pdict.StoresInfo.ID}<br>
+${pdict.StoresInfo.name}<br>
+${pdict.StoresInfo.phone}</h2>

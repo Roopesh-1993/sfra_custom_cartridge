@@ -1,0 +1,11 @@
+<isif condition="${pdict.productID}">
+<isif condition="${pdict.product}">
+      <h1>${pdict.productType}</h1>
+<iselse/>
+    <h1>${pdict.errorMsg}</h1>
+</isif>
+<iselse/>
+    <h1>${pdict.error}</h1>
+</isif>
+
+

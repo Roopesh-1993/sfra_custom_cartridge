@@ -1,0 +1,16 @@
+
+<br>
+<h1>Customer Details</h1>
+firstName: ${pdict.customer.firstName}<br>
+lastName: ${pdict.customer.lastName}<br>
+contactNumber: ${pdict.customer.phoneHome}<br>
+Email: ${pdict.customer.email}<br>
+
+<br>
+Zipcode: ${pdict.customer.custom.zip_code}
+
+<br>
+
+${pdict.customer.custom.zip_code}
+<br>
+${pdict.customer.listOfProductsViewed}

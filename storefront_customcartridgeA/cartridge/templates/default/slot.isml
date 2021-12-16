@@ -1,0 +1,15 @@
+<isdecorate template="common/layout/page">
+<div class="home-main homepage">
+        <isslot id="product" description="product details" context="global" />
+    </div>
+    <iscomment> <isinclude template="components/modules" />
+    <iscontentasset assetid="trainee" /> </iscomment>
+    
+    <div class="home-main homepage">
+        <isslot id="Contentasset" description="product details" context="global" />
+    </div>
+    
+    <isslot id="assignment" context="global" description="wlcome to SFCC"  />
+    <isinclude template="components/modules" />
+<iscontentasset aid="wel_come" />
+    </isdecorate>

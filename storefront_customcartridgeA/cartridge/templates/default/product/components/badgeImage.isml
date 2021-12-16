@@ -1,0 +1,29 @@
+<isscript>
+    var site=require('dw/system/Site');
+    var customValue=site.getCurrent().getCustomPreferenceValue("enableBadge");
+    </isscript>
+<isif condition="${customValue}">
+
+<isif condition="${product.badge=="arrival"}">
+<h1>${product.badge}</h1>
+<img src="${URLUtils.staticURL('/images/arrivals.png')}" width =" 20%" height = "20%" alt="image"  />
+</isif>
+
+<isif condition="${product.badge=="newArrival"}">
+<h1>${product.badge}</h1>
+<img src="${URLUtils.staticURL('/images/newArrival.png')}"  alt="image"  />
+</isif>
+
+<isif condition="${product.badge=="trending"}">
+<h1>${product.badge}</h1>
+<img src="${URLUtils.staticURL('/images/trending.png')}" width =" 20%" height = "20%" alt="image"  />
+</isif>
+<isif condition="${product.badge=="youthCentric"}">
+<h1>${product.badge}</h1>
+<img src="${URLUtils.staticURL('/images/youthCentric.png')}" width =" 20%" height = "20%" alt="image" />
+</isif>
+<isif condition="${product.badge=="bigBillion"}">
+<h1>${product.badge}</h1>
+<img src="${URLUtils.staticURL('/images/bigBillion.png')}" width =" 20%" height = "20%" alt="image" />
+</isif>
+</isif>

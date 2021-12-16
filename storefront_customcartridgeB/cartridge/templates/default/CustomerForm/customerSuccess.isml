@@ -1,0 +1,12 @@
+<iscomment> <isdecorate template="common/layout/page">
+	<h1>
+		${pdict.customerForm1.name.value}<br>
+         ${pdict.customerForm1.date.value},<br>
+		 ${pdict.customerForm1.email.value},<br>
+		 ${pdict.customerForm1.product.value},<br>
+		 ${pdict.customerForm1.team.value},<br>
+		 ${pdict.customerForm1.service.value},<br>
+          Thank you! 
+	</h1>
+	Back to <a href="${pdict.continueUrl}">Customer Feedback Form</a>.
+</isdecorate> </iscomment>

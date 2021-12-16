@@ -1,0 +1,31 @@
+
+<h2>Category Id</h2><h3>${pdict.catalogDetails.id}</h3>
+
+<h2>Category Name</h2><h3>${pdict.categoryHeirarchy.catedisplayName}</h3>
+
+${pdict.catalogDetails.onlineCategoryAssignments}
+
+
+<isloop items="${pdict.Categories.subCategories}" var="subs" status="loopstatus">
+    ${subs.cateID}
+</isloop></h3>
+
+
+<table>
+    <tr>
+        <th> subcatID </th>
+        <th> subcat name </th>
+        <th> subcat product </th>
+    <isloop items="${pdict.categoryHeirarchy.subCategories}" var="sub" status="loopstatus">
+     <tr>
+        <td> ${sub.cateID}</td>
+        <td> ${sub.catedisplayName}</td>
+        <td> ${sub.categoryProduct}</td>
+     </tr>
+    </isloop>
+    </tr>
+        
+</table>
+<isif condition="${pdict.siteRootCategory.subCategories}">
+
+</isif>

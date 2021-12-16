@@ -1,0 +1,15 @@
+<isif condition="${pdict.splitProduct}">
+    <h1>
+        Recently Viewed Products
+    </h1>
+        <div class="homepage-product-listing row">
+            <isloop items="${pdict.splitProduct}" var="productViewed" status="loopstatus">
+                <isif condition="${loopstatus.count <= 12}">
+                    <div class="col-6 col-sm-2">
+                        <isinclude
+                            url="${URLUtils.url('Tile-Show', 'pid', productViewed, 'pview', 'tile', 'ratings', true, 'swatches', true)}" />
+                    </div>
+                </isif>
+            </isloop>
+        </div>
+</isif>

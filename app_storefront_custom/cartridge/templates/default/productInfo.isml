@@ -1,0 +1,5 @@
+
+     <h1>Product name is :${pdict.product.productName}</h1><br>
+      <h1>Product Type is :${pdict.product.productType}</h1> 
+       <h1>Product details</h1><br>
+        ${JSON.stringify(pdict.product)}

@@ -1,0 +1,15 @@
+<div class="row">
+
+    <isloop items="${slotcontent.content}" var="category">
+        <div class="homepage-product-listing row">
+            <isloop items="${category.products}" var="product" status="loopstatus">
+                <isif condition="${loopstatus.count <= 5}">
+                    <div class="col-6 col-sm-4">
+                        <isinclude
+                            url="${URLUtils.url('Tile-Show', 'pid', product.ID, 'pview', 'tile', 'ratings', true, 'swatches', true)}" />
+                    </div>
+                </isif>
+            </isloop>
+        </div>
+    </isloop>
+</div>

@@ -1,0 +1,24 @@
+<div class="row cart-and-ipay">
+    <div class="col-sm-12">
+
+         <isif condition="${!customer.authenticated}">
+                <form action="${URLUtils.url('Product-NotifyProductInStock')}"
+                    data-url="${URLUtils.url('Product-NotifyProductInStock')}">
+                    <div class="form-group col-12 col-sm-8 required">
+                        <input name="email" type="text" class="form-control input-field" id="email"
+                            placeholder="Please enter email for notify" pattern="^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$"
+                            required />
+                    </div>
+                    <div class="form-group col-sm-4 ">
+                        <input class="form-control btn btn-primary" type="submit" value="send" />
+                    </div>
+                </form>
+            <iselse/>
+                <a href="${URLUtils.url('Product-NotifyProductInStock', 'pid', pdict.product.id)}">
+                    <button class="btn btn-primary notify-me-btn">Notify Me</button></a>
+            </isif>
+        <div class="w-100 text-center text-lg-left mt-2 email-success d-none" style="color: green">
+            Thank You, you'll get an email when item is available
+        </div>
+    </div>
+</div>

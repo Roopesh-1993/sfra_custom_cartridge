@@ -1,0 +1,78 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/login.css');
+    </isscript>
+    <h1 style="text-align:center">Customer Feedback Form</h1>
+    <div class="row justify-content-center equal-height">
+        <div class="col-sm-8 col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="login-form-nav">
+                        <form action="${pdict.actionUrl}" method="POST" class="customerForm-form" <isprint
+                            value="${pdict.customerForm.attributes}" encoding="off" />>
+
+                        <div class="form-group required">
+                            <label class="form-control-label">
+                                <isprint value="${pdict.customerForm.name.label}" encoding="htmlcontent" />
+                            </label>
+                            <input type="text" class="form-control" id="customerForm-form-name" <isprint
+                                value="${pdict.customerForm.name.attributes}" encoding="off" />>
+                        </div>
+
+                        <div class="form-group required">
+                            <label class="form-control-label">
+                                <isprint value="${pdict.customerForm.date.label}" encoding="htmlcontent" />
+                            </label>
+                            <input type="date" class="form-control" id="customerForm-form-date" <isprint
+                                value="${pdict.customerForm.date.attributes}" encoding="off" />>
+                        </div>
+
+                        <div class="form-group required">
+                            <label class="form-control-label">
+                                <isprint value="${pdict.customerForm.email.label}" encoding="htmlcontent" />
+                            </label>
+                            <input type="email" class="form-control" id="customerForm-form-email" <isprint
+                                value="${pdict.customerForm.email.attributes}" encoding="off" />>
+                        </div>
+
+                        <div class="form-group required">
+                            <label class="form-control-label">
+                                <isprint value="${pdict.customerForm.product.label}" encoding="htmlcontent" />
+                            </label>
+                            <input type="text" class="form-control" id="customerForm-form-product" <isprint
+                                value="${pdict.customerForm.product.attributes}" encoding="off" />>
+                        </div>
+
+                        <div class="form-group required">
+                            <label class="form-control-label">
+                                <isprint value="${pdict.customerForm.service.label}" encoding="htmlcontent" />
+                            </label>
+                            <input type="text" class="form-control" id="customerForm-form-service" <isprint
+                                value="${pdict.customerForm.service.attributes}" encoding="off" />>
+                        </div>
+
+                        <div class="form-group required">
+                            <label class="form-control-label">
+                                <isprint value="${pdict.customerForm.team.label}" encoding="htmlcontent" />
+                            </label>
+                            <input type="text" class="form-control" id="customerForm-form-team" <isprint
+                                value="${pdict.customerForm.team.attributes}" encoding="off" />>
+                        </div>
+
+                        <div class="form-group required">
+                            <label class="form-control-label">
+                                <isprint value="${pdict.customerForm.feedback.label}" encoding="htmlcontent" />
+                            </label>
+                            <textarea id="customerForm-form-feedback" rows="4" cols="80" <isprint
+                                value="${pdict.customerForm.feedback.attributes}" encoding="off" />> </textarea>
+                        </div>
+                       
+                        <button type="submit" class="btn btn-block btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</isdecorate>

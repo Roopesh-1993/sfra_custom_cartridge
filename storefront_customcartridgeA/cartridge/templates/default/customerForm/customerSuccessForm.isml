@@ -1,0 +1,14 @@
+<isdecorate template="common/layout/page">
+    <h3 style="text-align:center">
+        ${pdict.customerForm.name.value} <br>
+          ${pdict.customerForm.date.value}<br>
+        ${pdict.customerForm.email.value} <br>
+        ${pdict.customerForm.product.value}<br>
+        ${pdict.customerForm.service.value}<br>
+        ${pdict.customerForm.team.value}<br>
+        ${pdict.customerForm.feedback.value}<br>
+
+         Thank you! 
+    </h3>
+     Back to <a href="${pdict.continueUrl}">Customer FeedBack</a>. 
+</isdecorate>

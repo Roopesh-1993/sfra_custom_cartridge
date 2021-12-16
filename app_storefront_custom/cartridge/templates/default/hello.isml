@@ -1,0 +1,115 @@
+
+    <div>
+        <h1 style="text-align:center;color:red">
+            Salesforce Commerce Cloud
+        </h1>
+    </div>
+
+    <h4>${pdict.test}</h4>
+<isinclude template="error" sf-toolkit="on" />
+
+    <div>
+       <h3>
+        WELCOME 
+    </h3> 
+    </div>  </br>
+    
+    <div>
+
+        <h2>isscript Examples</h2>
+    <h4>
+        <isscript>
+            var a = 10;
+            var b = 20;
+            var c= a+b;
+            out.print(c);
+        </isscript> <br>
+        
+        <isscript>
+            var foobar = pdict.firstname + " " + pdict.lastname;
+            out.print( foobar );
+        </isscript>
+    </h4> 
+    </div> <br>
+    
+    <div>
+
+        <h2>isprint examples</h2>
+        <isprint value="${pdict.test}"/><br>
+
+        <isprint value="${c}" encoding="on" />
+    </div>
+        <div>
+        <h2>isset examples</h2>
+            <isset name="USN_1me15cs059" value="Roopesh" scope="page" />
+            <isprint value="${USN_1me15cs059}" /><br>
+
+            <isset name="Roopesh" value="Chintamani" scope="request" />
+            <isprint value="${request.custom.Roopesh}" /><br>
+
+            <isset name="Roopesh" value="Munaganahalli" scope="session" />
+            <isprint value="${session.custom.Roopesh}" />
+        </div>
+        <br>
+        <div>
+        <h2>isif example</h2>
+            <isscript>
+            var x = 9
+            var y = 10
+            var z = 7
+            </isscript>
+                
+            <isif condition="${x == 9}">
+            <isprint value = "${'correct'}"/>
+            <iselse/>
+            <isprint value="${'else incorrect'}"/>
+            </isif><br>
+
+            <isif condition="${y != 10}">
+            <isprint value = "${'correct'}"/>
+             <iselseif condition="${z != 7}">
+             <isprint value="${' elseif correct'}" encoding="on" />
+            <iselse/>
+            <isprint value="${'else incorrect'}"/>
+            </isif>
+
+        </div><br>
+        <div>
+            
+        </div>
+        <iscomment> <isloop iterator="iterator1" alias="element1" counter="c1">
+  <h3><isprint value="#element1#"></h3>
+  <ul>
+    <isloop iterator="iterator2" alias="element2" counter="c2">
+      <li>
+        <isprint value="#c1#">.
+        <isprint value="#c2#"/>.
+        <isprint value="#element1#"/>
+        <isif condition="#c2 == 1#">
+          (This is the first element of the inner list)
+        </isif>
+      </li>
+    </isloop>
+  </ul>
+</isloop> </iscomment>
+        <div>
+            <h3>isloop examples</h3>
+            <isscript>
+                 var testarr=[0,1,2,3,4,5];
+            </isscript>
+            <isloop var="i" items="${testarr}" status="status">
+                <isif condition="${status.count==0}"><iscontinue/>
+
+                </isif>
+                <isprint value=" ${i}"/>
+                <isif condition="${status.count==4}"><isbreak/>
+                </isif>
+             
+            </isloop>
+        </div>
+
+<iscomment>         
+
+            <isinclude template="account/login" sf-toolkit="on" />
+            </iscomment>
+

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19" secure="false">
+	
+		<field 
+			formid="nickname" 
+			label="Nickname:" 
+			mandatory="true" 
+			max-length="50"
+			
+			type="string" />
+           <action formid="submit" valid-form="true"/>
+	<action formid="cancel" valid-form="false"/>
+       </form>     
+
+
+
+       
+
+      

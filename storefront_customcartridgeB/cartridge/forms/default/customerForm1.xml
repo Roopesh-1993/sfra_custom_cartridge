@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19" secure="false">
+	<field 
+		formid="name" 
+		label="label.input.name.customerForm1" 
+		mandatory="true" 
+		max-length="50" 
+		type="string" />
+
+	<field 
+		formid="product" 
+		label="label.input.product.customerForm1" 
+		mandatory="true" 
+		max-length="50" 
+		type="string" />
+
+	<field 
+		formid="product" 
+		label="label.input.product" 
+		mandatory="true" 
+		max-length="50" 
+		type="string" />
+
+		<field 
+		formid="service" 
+		label="label.input.service" 
+		mandatory="true" 
+		max-length="50" 
+		type="string" />
+
+		<field 
+		formid="team" 
+		label="label.input.team" 
+		mandatory="true" 
+		max-length="50" 
+		type="string" />
+
+	   <field 
+		formid="feedback" 
+		label="label.input.feedback" 
+		mandatory="true" 
+		max-length="50" 
+		type="string" />
+
+
+	<field
+		formid="email" 
+		label="label.input.email.customerForm1" 
+		mandatory="true" 
+		max-length="50" 
+		regexp="^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$"
+		type="string" />
+</form>

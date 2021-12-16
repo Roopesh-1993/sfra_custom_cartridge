@@ -1,0 +1,47 @@
+<isif condition="${slotcontent}">
+
+    <iscomment> Render a tile of the category Name and the Category Landing Slot Image field </iscomment>
+
+    <div class="homepage shop-the-style">
+        <isslot id="category-set-m" description="Link to a Product Set." context="global" />
+
+    </div>
+
+
+    <div class="category-slot">
+        <isif condition="${slotcontent && slotcontent.calloutMsg}">
+            <h2>
+                <isprint value="${slotcontent.calloutMsg}" encoding="off" />
+            </h2>
+        </isif>
+
+        <div class="row">
+            <isloop items="${slotcontent.content}" var="category">
+                <isif condition="${'slotBannerImage' in category.custom && category.custom.slotBannerImage}">
+                    <div class="col-sm-6 col-md-4 category-item">
+                        <a href="${URLUtils.url('Search-Show', 'cgid', category.ID)}" title="${category.displayName}">
+                            <div class="category-tile">
+                                <img class="img-fluid" src="${category.custom.slotBannerImage.getURL()}"
+                                    alt="${category.displayName}" />
+                                <h1>
+                                    <isprint value="${category.displayName}" encoding="htmlcontent" />
+                                </h1>
+                            </div>
+                        </a>
+                    </div>
+                </isif>
+                <iscomment> <div class="homepage-product-listing row">
+                    <isloop items="${category.products}" var="product" status="loopstatus">
+                        <isif condition="${loopstatus.count <= 5}">
+                            <div class="col-6 col-sm-4">
+                                <isinclude
+                                    url="${URLUtils.url('Tile-Show', 'pid', product.ID, 'pview', 'tile', 'ratings', true, 'swatches', true)}" />
+                            </div>
+                        </isif>
+                    </isloop>
+                </div> </iscomment>
+            </isloop>
+        </div>
+    </div>
+
+</isif>

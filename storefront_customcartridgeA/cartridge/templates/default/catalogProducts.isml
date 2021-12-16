@@ -1,0 +1,31 @@
+
+${JSON.stringify(pdict.categoryHeirarchy)} <br>
+
+<h1>Category Information</h1>
+<h2>Category Id</h2><h3>${pdict.categoryHeirarchy.cateID}</h3>
+<h2>Category Name</h2><h3>${pdict.categoryHeirarchy.catedisplayName}</h3>
+
+<h2> Available Products </h2><h3>
+<isloop items="${pdict.categoryHeirarchy.subCategories}" var="subs" status="loopstatus">
+    ${subs.categoryProduct}
+</isloop></h3>
+<h2> Available SubCategories</h2>
+<h3>${pdict.categoryHeirarchy.subCategories.length}</h3>
+
+<table>
+    <tr>
+        <th>subcatID </th>
+        <th>subcat name </th>
+        <th>subcat product </th>
+    <isloop items="${pdict.categoryHeirarchy.subCategories}" var="sub" status="loopstatus">
+     <tr>
+        <td>${sub.cateID}</td>
+        <td>${sub.catedisplayName}</td>
+        <td>${sub.categoryProduct}</td>
+     </tr>
+        <iscomment> <isloop items="${pdict.categoryHeirarchy.subCategories.sub}" var="subs" status="loopstatus">
+            sub id:${subs.cateID}<br>
+        </isloop> </iscomment>
+    </isloop>
+    </tr>
+</table>

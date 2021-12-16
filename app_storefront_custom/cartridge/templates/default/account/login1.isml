@@ -1,0 +1,24 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/login.css');
+        assets.addJs('/js/login.js');
+    </isscript>
+  
+    
+
+<!--- --->
+<div class="card">
+	<form action="${pdict.actionUrl}" class="login" method="POST"
+		name="SFRAHelloForm">
+
+		<div class="form-group required">
+			<label> Nickname: </label> <input type="input" id="nickname"
+				class="form-control" name="nickname">
+		</div>
+
+		<button type="submit" class="btn btn-block btn-primary">Submit</button>
+		<button type="submit" class="btn btn-block btn-primary">Cancel</button>
+	</form>
+</div>
+</isdecorate>

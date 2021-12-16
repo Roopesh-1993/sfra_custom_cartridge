@@ -1,0 +1,3 @@
+${pdict.currentVar.id}<br>
+${pdict.currentVar.productName}<br>
+${pdict.currentVar.productType}<br>

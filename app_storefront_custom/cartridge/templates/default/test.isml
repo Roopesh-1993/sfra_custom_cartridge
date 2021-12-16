@@ -1,0 +1,43 @@
+<isdecorate template="common/layout/page">
+
+<div class="javaScript" style="text-align:center">
+  
+
+<h1 style="color:blue;">Customer Details</h1>
+ <div>
+     ${pdict.firstName}
+ </div> 
+ <div>
+     ${pdict.lastName}
+ </div>
+<div>
+ ${pdict.age }   
+</div>
+<div>
+    ${pdict.eyeColor}
+</div>
+<h4 style="color:blue;">return function</h4>
+  <div>
+      ${pdict.roopesh}
+  </div>
+<h4 style="color:blue;">Using array</h4>
+  ${pdict.course}
+
+  <h4 style="color:blue;">IF condition</h4>
+  ${pdict.condition}
+
+  <h4 style="color:blue;">For Loop condition</h4>
+  ${pdict.loop}
+
+  <h4 style="color:blue;">addTwoNumbers</h4>
+  ${pdict.addTwoNumbers}
+  <h4 style="color:blue;">jsonData</h4>
+  ${pdict.jsonData}
+  <h4 style="color:blue;">doWhileLoop</h4>
+  ${pdict.whileLoop}
+
+<h4 style="color:blue;">break using forLoop</h4>
+${pdict.breakLoop}
+</div>
+</isdecorate>
+

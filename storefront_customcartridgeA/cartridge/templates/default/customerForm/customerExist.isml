@@ -1,0 +1,8 @@
+<isdecorate template="common/layout/page">
+    
+
+<h3>Already exist</h3>
+
+Name:${pdict.customObjects.custom.name} <br>
+Email:${pdict.customObjects.custom.email}<br>
+</isdecorate>

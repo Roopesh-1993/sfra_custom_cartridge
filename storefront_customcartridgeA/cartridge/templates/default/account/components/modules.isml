@@ -1,0 +1,8 @@
+<ismodule template="/components/content/contentAsset"
+    name="contentasset"
+    attribute="aid"
+/>
+
+<ismodule template = "/components/content/contentAsset"
+name = "bgcolor"
+attribute = "color" />

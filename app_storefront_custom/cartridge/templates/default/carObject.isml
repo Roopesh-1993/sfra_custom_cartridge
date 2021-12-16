@@ -1,0 +1,26 @@
+
+
+<isloop items="${pdict.car}" var="car" status="loopstatus">
+     <tr>
+        <td>
+            ${car.name}<br>
+        </td>
+        <td>
+            ${car.models[0]}<br>
+        </td>
+        <td>
+            ${car.colors[0]}<br>
+        </td>
+        <td>
+        ${car.fuel[0]}<br>
+        </td>
+        <td>
+        ${car.mainMarkets[0]}<br>
+        </td><hr>
+     </tr>
+    </isloop>
+
+
+    ${pdict.name}<br>
+    ${pdict.model}<br>
+    ${pdict.color}<br>

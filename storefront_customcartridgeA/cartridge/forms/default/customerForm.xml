@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19" secure="false">
+	
+			<field 
+			formid="name" 
+			label="label.input.name.customerForm" 
+			mandatory="true" 
+			max-length="50"
+			missing-error="error.message.required" 
+			type="string" />
+
+			<field
+			formid="email" 
+			label="label.input.email.customerForm" 
+			mandatory="true" 
+			max-length="50" 
+			missing-error="error.message.required"
+			parse-error="error.message.parse.email.profile.form"
+			 regexp="^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$"  
+			value-error="ValueErrorText"
+			type="string"/> 
+
+			<field
+			formid="date" 
+			label="label.input.date" 
+			mandatory="true" 
+			max-length="50" 
+			missing-error="error.message.required"
+			value-error="ValueErrorText"
+			type="string"/> 
+			
+
+			<field 
+			formid="product"
+			label="label.input.product"
+			mandatory="true"
+			missing-error="error.message.required"
+			type="string"/>
+
+		    <field 
+			formid="service"
+			label="label.input.service"
+			mandatory="true"
+			missing-error="error.message.required"
+			type="string"/>
+
+			<field 
+			formid="team"
+			label="label.input.team"
+			mandatory="true"
+			missing-error="error.message.required"
+			type="string"/>
+
+
+			<field 
+			formid="feedback"
+			label="label.input.feedback"
+			mandatory="true"
+			missing-error="error.message.required"
+			type="string"/> 
+</form>

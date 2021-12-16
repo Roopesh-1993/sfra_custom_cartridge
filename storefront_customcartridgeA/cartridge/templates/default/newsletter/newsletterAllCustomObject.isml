@@ -1,0 +1,3 @@
+<h1>Number of custom object type</h1>
+        ${pdict.customdisp} <br>
+         
